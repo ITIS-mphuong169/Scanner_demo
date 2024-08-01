@@ -8,7 +8,7 @@ CANDIDATES = [
     "Bùi Hồng Hà", "Đinh Việt Dũng", "Trần Thu Thiên", "Nguyễn Thị Tuyết Anh"
 ]
 
-path = "1.jpg"
+path = "image1.jpg"
 widthImg = 700
 heighthImg = 700
 
@@ -92,7 +92,7 @@ if biggestCont.size != 0 and gradePoint.size != 0:
     imgBlank = np.zeros_like(img)
     imgArray = ([img, imgGray, imgBlur, imgCanny],
                 [imgContours, imgBiggestContours, imgWarpColored, imgThresh])
-    imgStack = stackImages(imgArray, 0.5)
+    imgStack = utlis.stackImages(imgArray, 0.5)
 
     cv2.imshow("Stack Image", imgStack)
     cv2.waitKey(0)
